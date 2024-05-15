@@ -1,0 +1,22 @@
+package java.rays.stat;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+public class TestInsert {
+
+	public static void main(String[] args) throws Exception {
+		
+		Class.forName("com.mysql.cj.jdbc.Driver");
+
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ facebookusers", "root", "root");
+
+		Statement stmt = conn.createStatement();
+
+		int i = stmt.executeUpdate("insert into users values ( 3,'uavnish345@gmail.com ', 'sdrty@1234','ravi',7894561235)");
+		
+		System.out.println("Data Insersted Successfully......"+ i);
+	}
+	
+}

@@ -1,0 +1,15 @@
+package com.rays.bundelee;
+
+import java.util.ResourceBundle;
+
+public class TestBundelee {
+  
+	public static void main(String[] args) {
+		
+		ResourceBundle rb = ResourceBundle.getBundle("com.rays.bundle.system");
+		key = rb.getString(rb.getString(key));
+		
+	}
+	
+	
+}

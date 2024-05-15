@@ -1,0 +1,10 @@
+package com.rays.facebook;
+
+public class UserModel {
+
+	public void add (UserBean bean ) {
+		
+		
+	}
+	
+}

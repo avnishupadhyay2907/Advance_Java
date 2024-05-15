@@ -1,0 +1,25 @@
+package com.rays.stat;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+public class TestUpdate {
+
+	public static void main(String[] args) throws Exception {
+
+		Class.forName("com.mysql.cj.jdbc.Driver");
+
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbcadvance", "root", "root");
+
+		System.out.println("connection successfully...");
+
+		Statement stmt = conn.createStatement();
+
+		int i = stmt.executeUpdate("update user set password = 'password@2167' where id = 2");
+
+		System.out.println("Data Updated Successfully..." + i);
+
+	}
+
+}
